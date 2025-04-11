@@ -3,6 +3,8 @@
 import 'package:flutter/material.dart';
 import 'package:posts_app_clean_arch_bloc/features/posts/domain/entities/post.dart';
 
+import '../../pages/add_update_delete_screen.dart';
+
 class PostListWidget extends StatelessWidget {
   final List<Post> posts ;
 
@@ -13,10 +15,17 @@ class PostListWidget extends StatelessWidget {
     return ListView.separated(
           itemCount: posts.length,
           itemBuilder: (context,index){
-            return ListTile(
-              leading: Text(posts[index].id.toString()),
-              title: Text(posts[index].title),
-              contentPadding: EdgeInsets.all(5),
+            return InkWell(
+              onTap: (){
+                Navigator.of(context).push
+                  (MaterialPageRoute(builder: (_)=>
+                    AddUpdateDeleteScreen(isUpdate: true,post: posts[index],)));
+              },
+              child: ListTile(
+                leading: Text(posts[index].id.toString()),
+                title: Text(posts[index].title),
+                contentPadding: EdgeInsets.all(5),
+              ),
             );
           },
        separatorBuilder: (context,index){

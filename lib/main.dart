@@ -45,6 +45,7 @@ class _MyHomePageState extends State<MyHomePage> {
 
     ],
         child:MaterialApp(
+            theme: themeData,
             debugShowCheckedModeBanner: false,
             title: 'Posts App',
             home: PostsScreen()));
