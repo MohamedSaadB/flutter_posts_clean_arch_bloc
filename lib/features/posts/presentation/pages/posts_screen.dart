@@ -23,11 +23,12 @@ class PostsScreen extends StatelessWidget {
 
 Widget _buildFloatingActionButton(BuildContext context) {
   return FloatingActionButton(
-      backgroundColor: Colors.blue,
+      backgroundColor: Colors.blueGrey,
       onPressed: (){
-        Navigator.of(context).push(MaterialPageRoute(builder: (_)=>AddUpdateDeleteScreen(isUpdate: true,)));
+        Navigator.of(context).push
+          (MaterialPageRoute(builder: (_)=>AddUpdateDeleteScreen(isUpdate: false,)));
       },
-      child: Icon(Icons.add),
+      child: Icon(Icons.add,color: Colors.white,),
       );
 }
 
