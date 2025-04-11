@@ -44,6 +44,9 @@ class _MyHomePageState extends State<MyHomePage> {
       BlocProvider(create:(_)=> di.sl<AddUpdateDeleteBloc>()),
 
     ],
-        child:PostsScreen());
+        child:MaterialApp(
+            debugShowCheckedModeBanner: false,
+            title: 'Posts App',
+            home: PostsScreen()));
   }
 }

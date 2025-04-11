@@ -2,7 +2,7 @@ import 'package:posts_app_clean_arch_bloc/features/posts/domain/entities/post.da
 
 class PostModel extends Post{
 
-  const PostModel({required super.id, required super.title, required super.body});
+  const PostModel({super.id, required super.title, required super.body});
 
   factory PostModel.fromJson(Map<String,dynamic> json){
     return PostModel(id: json['id'], title: json['title'], body: json['body']);
