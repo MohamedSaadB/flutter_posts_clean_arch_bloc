@@ -8,7 +8,8 @@ plugins {
 android {
     namespace = "com.example.posts_app_clean_arch_bloc"
     compileSdk = flutter.compileSdkVersion
-    ndkVersion = flutter.ndkVersion
+    ndkVersion ="27.0.12077973"
+
 
     compileOptions {
         sourceCompatibility = JavaVersion.VERSION_11
